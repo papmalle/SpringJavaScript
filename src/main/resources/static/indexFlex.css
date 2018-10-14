@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('fonts/webfonts/cacchampagne/cac_champagne-webfont.eot');
+    src: url('fonts/webfonts/cacchampagne/cac_champagne-webfont.eot?iefix') format('eot'),
+    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.woff') format('woff'),
+    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.ttf') format('truetype'),
+    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.svg#webfont') format('svg');
+}
+
+body {
+    /*background-image: url("pommeFond.jpg");*/
+    /*background-repeat: no-repeat ;*/
+    /*background-position: top right;*/
+    /*background: mistyrose url("pomme.jpg") no-repeat scroll top right;*/
+    /*background: mistyrose url("pomme.jpg") no-repeat scroll right center;*/
+    /*background: url("pomme.jpg") scroll no-repeat top right;*/
+    color: brown;
+}
+
+a:hover {
+    color: orangered;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:focus /* Quand le visiteur sélectionne le lien */
+{
+    background-color: #FFCC66;
+}
+
+a:active {
+    color: green;
+    background-color: #FFCC66;
+
+}
+
+a:visited {
+    color: red;
+}
+
+p {
+    color: blue;
+    text-align: justify;
+}
+
+h1 {
+    color: darkorange;
+    text-shadow: 2px 2px 4px black;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: bold; /*mise en gras */
+    font-family: 'MyWebFont';
+    text-decoration: underline;
+    text-align: center;
+    border: 5px sandybrown solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px black; /* inset pour l'ombre à l'ineterieur */
+}
+
+h2:hover {
+    background-color: silver;
+}
+
+ol, ul {
+    font-style: oblique;
+}
+
+mark {
+    background-color: olive;
+}
+
+p mark {
+    background-color: olive;
+    color: blue;
+}
+
+hr {
+    border: 2px darkgoldenrod solid;
+}
+
+/* Il existe plusieurs techniques pour positionner les blocs sur la page. Flexbox est la technique la plus récente et de loin la plus puissante, que je vous recommande d'utiliser.
+
+Le principe de Flexbox est d'avoir un conteneur, avec plusieurs éléments à l'intérieur. Avecdisplay: flex; sur le conteneur, les éléments à l'intérieur sont agencés en mode Flexbox (horizontalement par défaut).
+
+Flexbox peut gérer toutes les directions. Avecflex-direction, on peut indiquer si les éléments sont agencés horizontalement (par  défaut) ou verticalement. Cela définit ce qu'on appelle l'axe principal.
+
+L'alignement des éléments se fait sur l'axe principal avecjustify-content , et sur l'axe secondaire avecalign-items.
+
+Avecflex-wrap, on peut autoriser les éléments à revenir à la ligne s'ils n'ont plus d'espace.
+
+S'il y a plusieurs lignes, on peut indiquer comment les lignes doivent se répartir entre elles avecalign-content.
+
+Chaque élément peut être réagencé en CSS avecorder (pas besoin de toucher au code HTML !).
+
+Avec la super-propriétéflex, on peut autoriser nos éléments à occuper plus ou moins d'espace restant.
+
+Flexbox, c'est cool.*/
+
+#conteneur {
+    display: flex;
+    flex-direction: row; /* par défaut */
+    justify-content: space-around; /* L'alignement des éléments se fait sur l'axe principal avecjustify-content , et sur l'axe secondaire avec align-items. */
+    /*align-items est  alignement pour l'axe secondaire, si l'axe principale est horizontal (flex-direction: row)
+     l'axe sécondaire est alors verticale (flex-direction: column)*/
+    align-items: stretch; /*  les éléments sont étirés sur tout l'axe (valeur par défaut)*/
+
+    /*flex-wrap: wrap; !*les flex vont àla ligne sil ya pas de place *!*/
+}
+
+#conteneur section {
+    width: 20%;
+    border: 1px black solid;
+    /*word-wrap: break-word;*/
+}
+
+.section-element:nth-child(1) {
+    background-color: olive;
+    /*align-self: flex-end; !* Seul ce bloc sera aligné à la fin *!*/
+    order: 4;
+}
+
+.section-element:nth-child(2) {
+    background-color: coral;
+    order: 3;
+    /*wi*/
+
+}
+
+.section-element:nth-child(3) {
+    background-color: khaki;
+    order: 2;
+
+}
+
+.section-element:nth-child(4) {
+    background-color: lightgreen;
+    order: 1; /* change l'ordre et le met en premier*/
+    /*flex: 1;!* Avec la propriétéflex , nous pouvons permettre à un élément de grossir pour occuper tout l'espace restant. *!*/
+}
+

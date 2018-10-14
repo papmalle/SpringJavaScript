@@ -1,0 +1,141 @@
+<!DOCTYPE html> <!-- montre que la page est écrite en html5-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="indexFlex.css">
+    <title>Renaissance</title>
+</head>
+<body>
+<header>
+    <h1>Welcome to Renaissance</h1>
+</header>
+<!--MAIS POUR LE STATIC AVEC SPRING IL FAUT LE METTRE DANS LE DOSSIER resources/static pour pouvir y acceder
+ https://spring.io/blog/2013/12/19/serving-static-web-content-with-spring-boot
+
+<!--<nav>: principaux liens de navigation-->
+<nav>
+    <ol>
+        <li title="InfoBulle conseil">
+            <a href="/memorisation" target="_blank">
+                <strong>
+                    <mark><em>Go to Conseil tutorial</em></mark>
+                </strong>
+            </a>
+        </li>
+        <li><a href="/zozo">Go to zozo</a></li>
+        <!--ATTENTION AVEC SPRING IL FAUT PASSER PAR LE CONTROLER POUR TLECHARGER UN FICHIER OU ACCEDER A UN DOCUMENT DE TON DOSSIER -->
+        <li><a href="carteIdentite.zip">Télécharger Carte identité zip</a></li>
+        <li><a href="carteIdentite.jpg">Télécharger Carte identité photo</a></li>
+        <li><a href="https://openclassrooms.com/">Goto Open Classrooms</a></li>
+        <li><a href="#mon_ancre">Go paragrahe 2</a></li>
+        <li><a href="/cv">CV</a></li>
+    </ol>
+</nav>
+
+<!--<section>: une section de page-->
+<!--La balise<section>sert à regrouper des contenus en fonction de leur thématique. Elle englobe généralement une portion du contenu au centre de la page.-->
+
+<!--<section>-->
+<!--<h1>Ma section de page</h1>-->
+<!--<p>Bla bla bla bla</p>-->
+<!--</section>-->
+<div id="conteneur">
+    <section class="section-element">
+        <h2>Introduction sur renaissance de la vie</h2>
+        <p title="Infobulles paragraphe 1" class="paragrah1">Bonjour et
+            <mark>bienvenue</mark>
+            sur mon site !
+            Ceci est mon premier test alors <strong><em>soyez indulgents</em></strong> s'il vous plaît, <br/>
+            j'apprends petit à petit comment cela marche. Pour l'instant c'est un peu vide, mais revenez dans 2-3 jours
+            <br/>
+            quand j'aurai appris un peu plus de choses, je vous
+            assure que vous allez être surpris !
+        </p>
+    </section>
+
+    <section class="section-element">
+        <h2>Développement sur renaissance de la vie</h2>
+        <ul>
+            <li>Vie</li>
+            <li>Changement</li>
+            <li>Actualité</li>
+        </ul>
+        <p id="mon_ancre" title="Infobulle paragraphe 2" class="paragraph2">Bonjour et bienvenue sur mon site !
+            Ceci est mon premier test alors soyez indulgents s'il vous plaît, <br/>
+            j'apprends petit à petit comment cela marche. Pour l'instant c'est un peu vide, mais revenez <strong><em>dans
+                2-3
+                jours</em></strong> <br/>
+            quand j'aurai appris un peu plus de <span>choses</span>, je vous
+            assure que vous allez être surpris !
+        </p>
+    </section>
+
+    <section class="section-element">
+        <h2>Chapitre sur la renaissance</h2>
+        <div id="conteneur2">
+            <p id="paragraph3" title="Infobulle paragraphe 3" class="paragraph3">Bonjour et bienvenue sur mon site !
+                Ceci est mon premier test alors soyez indulgents s'il vous plaît, <br/>
+                j'apprends petit à petit comment cela marche. Pour l'instant c'est un peu vide, mais revenez
+                <strong><em>dans
+                    15-30 jours</em></strong>
+                quand j'aurai appris un peu plus de choses, je vous
+                assure que vous allez être surpris !
+            </p>
+            <p id="paragraph3Bis1" title="Infobulle paragraphe 3" class="paragraph3">Bonjour et bienvenue sur mon site !
+                Ceci est mon premier test alors soyez indulgents s'il vous plaît, <br/>
+                j'apprends petit à petit comment cela marche. Pour l'instant c'est un peu vide, mais revenez
+                <strong><em>dans
+                    15-30 jours</em></strong>
+                quand j'aurai appris un peu plus de choses, je vous
+                assure que vous allez être surpris !
+            </p>
+
+            <p id="paragraph3Bis2" title="Infobulle paragraphe 3" class="paragraph3">Bonjour et bienvenue sur mon site !
+                Ceci est mon premier test alors soyez indulgents s'il vous plaît, <br/>
+                j'apprends petit à petit comment cela marche. Pour l'instant c'est un peu vide, mais revenez
+                <strong><em>dans
+                    15-30 jours</em></strong>
+                quand j'aurai appris un peu plus de choses, je vous
+                assure que vous allez être surpris !
+            </p>
+        </div>
+    </section>
+
+    <!--<section>-->
+    <!--<p class="paragraph4"><a href="mailto:votrenom@bidule.com">Envoyez-moi un e-mail !</a></p>-->
+    <!--</section>-->
+
+    <section class="section-element">
+        <article>
+            <h2>Mon article</h2>
+            <p>
+                La balise articlesert à englober une portion généralement autonome de la page. C'est une partie de la
+                page
+                qui
+                pourrait ainsi être reprise sur un autre site. C'est le cas par exemple des actualités (articles de
+                journaux
+                ou
+                de blogs).
+            </p>
+        </article>
+
+        <aside>
+            <p>
+                sont généralement placées sur le côté (bien que ce ne soit pas une obligation).
+                La balise est conçue pour contenir des informations complémentaires au document que l'on visualise. Ces
+                informations
+            </p>
+        </aside>
+    </section>
+</div>
+<hr/>
+
+<footer>
+    <p>Copyright Zozor - Tous droits réservés<br/>
+        <a href="#">Me contacter !</a></p>
+</footer>
+
+<script src="indexTableau.js"></script>
+<!--<script src="indexFlex.js"></script>-->
+</body>
+</html>

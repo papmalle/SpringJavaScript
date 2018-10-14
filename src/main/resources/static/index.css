@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('fonts/webfonts/cacchampagne/cac_champagne-webfont.eot');
+    src: url('fonts/webfonts/cacchampagne/cac_champagne-webfont.eot?iefix') format('eot'),
+    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.woff') format('woff'),
+    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.ttf') format('truetype'),
+    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.svg#webfont') format('svg');
+}
+
+body {
+    /*background-image: url("pommeFond.jpg");*/
+    /*background-repeat: no-repeat ;*/
+    /*background-position: top right;*/
+    background: mistyrose url("pomme.jpg") no-repeat scroll top right;
+    /*background: mistyrose url("pomme.jpg") no-repeat scroll right center;*/
+    /*background: url("pomme.jpg") scroll no-repeat top right;*/
+    color: brown;
+}
+
+a:hover {
+    color: orangered;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+En CSS, on peut modifier l
+    /*'apparence de certaines sections dynamiquement, après le chargement de la page, lorsque certains évènements se produisent. On utilise pour cela les pseudo-formats.*/
+    /*Le pseudo-format:hoverpermet de changer l*/
+    /*'apparence au survol (par exemple :a:hoverpour modifier l'*/
+    /*apparence des liens lorsque la souris pointe dessus*/
+    /*)*/
+    /*.*/
+    /*Le pseudo-format:activemodifie l*/
+    /*'apparence des liens au moment du clic,:visitedlorsqu'*/
+    /*un lien a déjà été visité.*/
+    /*Le pseudo-format:focuspermet de modifier l*/
+    /*'apparence d'*/
+    /*un élément sélectionné.*/
+a:focus /* Quand le visiteur sélectionne le lien */
+{
+    background-color: #FFCC66;
+}
+
+a:active {
+    color: green;
+    background-color: #FFCC66;
+
+}
+
+a:visited {
+    color: red;
+}
+
+p {
+    color: blue;
+    text-align: justify;
+    width: 50%;
+    max-width: 800px;
+}
+
+h1 {
+    color: darkorange;
+    text-shadow: 2px 2px 4px black;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: bold; /*mise en gras */
+    font-family: 'MyWebFont';
+    text-decoration: underline;
+    text-align: center;
+    border: 5px sandybrown solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px black; /* inset pour l'ombre à l'ineterieur */
+    width: 50%;
+}
+
+ol, ul {
+    font-style: oblique;
+}
+
+em {
+    color: darkgreen;
+    font-style: normal; /* pas italic par defaut pour les em */
+}
+
+h1, em {
+}
+
+.paragraph2 {
+    color: darkred;
+    opacity: 1;
+    background-color: lavender;
+    /*border-left: 4px blue solid;*/
+    /*padding-left: 20px;*/
+    /*font-weight: bold;*/
+    font-style: italic;
+
+}
+
+/*le paragraphe qui contient un attribut id  dont la valeur mon ancre*/
+
+p[id="mon_ancre"] {
+    color: red;
+    font-size: medium;
+}
+
+/* change la couleur de la balise em qui se trouve dans le paragraphe p qui contient un attribut id  dont la valeur = mon ancre*/
+
+p[id="mon_ancre"] em {
+    color: blue;
+    font-size: 20px;
+    font-family: 'MyWebFont';
+    /* taille absolue Pour indiquer une taille absolue, on utilise généralement les pixels., cm mm
+      Indiquer une taille absolue : en pixels, en centimètres ou millimètres. Cette méthode est très précise mais il est conseillé de ne l'utiliser que si c'est absolument nécessaire, car on risque d'indiquer une taille trop petite pour certains lecteurs.
+      */
+}
+
+p[id="paragraph3"] em {
+    color: darkorange;
+    font-size: 1.2em;
+    /*  taille relative, 1 em c'est normal, et 1.2 em pour à grandir .
+    Indiquer une taille relative : en pourcentage, « em » ou « ex », cette technique a l'avantage d'être plus souple. Elle    s'adapte plus facilement aux préférences de taille des visiteurs.
+
+    */
+}
+
+.paragraph4 {
+    text-align: right;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+mark {
+    background-color: #eeeeee;
+}
+
+hr {
+    border: 2px darkgoldenrod solid;
+}
+
+h2:hover {
+    background-color: silver;
+}
+
+
+/*#conteneur p{*/
+    /*border: 1px black solid;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+    /*text-align: justify;*/
+    /*background-color: indianred;*/
+    /*cursor: pointer;*/
+
+/*}*/
+/*#conteneur{*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+/*}*/
+
+
+
+
+
+/*p {*/
+/*word-wrap: couper les textes trop larges Si vous devez placer un mot très long dans un bloc, qui ne tient pas dans la largeur, vous allez adorerword-wrap . Cette propriété permet de forcer la césure des très longs mots (généralement des adresses un peu longues) . La figure suivante représente ce que l 'on peut avoir quand on écrit une URL un peu longue dans un bloc.
+ word-wrap: break-word;
+
+ Je conseille d'utiliser cette fonctionnalité dès qu'un bloc est susceptible de contenir du texte saisi par des utilisateurs (par exemple sur les forums de votre futur site). Sans cette astuce, on peut « casser » facilement le design d'un site (en écrivant par exemple une longue suite de « aaaaaaaaaaa »).
+ */
+
+/*}*/

@@ -1,0 +1,43 @@
+body{
+    text-align: justify;
+    font-family: Arial;
+    width: 50%;
+    background-color: thistle;
+}
+
+.photoCv{
+    float: right;
+    box-shadow: 2px 2px 0px black ; /* inset pour l'ombre à l'ineterieur */
+    /*border: 5px sandybrown solid;*/
+}
+header{
+    text-align: center;
+}
+p{
+    /*text-align: justify;*/
+}
+h2{
+   color: black;
+    background-color:darkorange ;
+}
+h3{
+    color: black;
+    background-color: palegoldenrod ;
+    width: 20%;
+}
+strong{
+    color: black;
+    font-weight: bold;
+}
+h2:hover{
+    background-color: green;
+}
+h3:hover{
+    color: red;
+}
+footer{
+    font-style: italic;
+}
+hr{
+    border: 2px sandybrown solid;
+}
