@@ -1,17 +1,32 @@
 package com;
 
+import com.mproduits.api.ProductsApi;
+import com.mproduits.dto.ProductResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 
 @SpringBootApplication
 @Controller
+@Slf4j
+@EnableFeignClients
 public class ApplicationTuto {
+
+    @Autowired
+    ProductsApi productsApi;
 
     @GetMapping("/")
     public String hello() {
+        final List<ProductResponse> products = productsApi.getProducts();
+
+
         return "index";
     }
 
@@ -34,6 +49,10 @@ public class ApplicationTuto {
         SpringApplication.run(ApplicationTuto.class, args);
     }
 }
+
+
+
+
 
 /*
     number_1etnumber_2ont tous deux été incrémentés. Quelle est donc la différence entre les deux procédés ?
