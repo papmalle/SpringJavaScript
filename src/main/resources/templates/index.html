@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- montre que la page est écrite en html5-->
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="indexFlex.css">
@@ -31,6 +31,11 @@
         <li><a href="/cv">CV</a></li>
     </ol>
 </nav>
+
+<tr th:each="product: ${products}">
+    <td th:text="${product.title}" />
+    <td th:text="${product.description}" />
+</tr>
 
 <!--<section>: une section de page-->
 <!--La balise<section>sert à regrouper des contenus en fonction de leur thématique. Elle englobe généralement une portion du contenu au centre de la page.-->
@@ -134,8 +139,10 @@
     <p>Copyright Zozor - Tous droits réservés<br/>
         <a href="#">Me contacter !</a></p>
 </footer>
-<script src="tpjS.js"></script>
+
+<!--<script src="indexDom.js"></script>-->
+<script src="indexEvenement.js"></script>
 <!--<script src="indexTableau.js"></script>-->
-<!--&lt;!&ndash;<script src="indexFlex.js"></script>&ndash;&gt;-->
+<!--<script src="indexFlex.js"></script>-->
 </body>
 </html>

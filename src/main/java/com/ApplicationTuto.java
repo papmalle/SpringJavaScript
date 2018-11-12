@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
@@ -16,17 +17,18 @@ import java.util.List;
 @SpringBootApplication
 @Controller
 @Slf4j
-@EnableFeignClients
+//@EnableFeignClients("nom du package ou se trouve le proxy feign")
+@EnableFeignClients("com.mproduits.api") // nom du package ou se trouve le proxy feign (interface Api) , ajout EnableFeign est obligatoire sinon on va avoir une erreur : Consider defining a bean of type 'com.mproduits.api.ProductsApi' in your configuration.
 public class ApplicationTuto {
 
     @Autowired
     ProductsApi productsApi;
 
     @GetMapping("/")
-    public String hello() {
+    public String hello(Model model) {
         final List<ProductResponse> products = productsApi.getProducts();
 
-
+        model.addAttribute("products", products);
         return "index";
     }
 

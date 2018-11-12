@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'MyWebFont';
-    src: url('fonts/webfonts/cacchampagne/cac_champagne-webfont.eot');
-    src: url('fonts/webfonts/cacchampagne/cac_champagne-webfont.eot?iefix') format('eot'),
-    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.woff') format('woff'),
-    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.ttf') format('truetype'),
-    url('fonts/webfonts/cacchampagne/cac_champagne-webfont.svg#webfont') format('svg');
+    src: url('assets/fonts/webfonts/cacchampagne/cac_champagne-webfont.eot');
+    src: url('assets/fonts/webfonts/cacchampagne/cac_champagne-webfont.eot?iefix') format('eot'),
+    url('assets/fonts/webfonts/cacchampagne/cac_champagne-webfont.woff') format('woff'),
+    url('assets/fonts/webfonts/cacchampagne/cac_champagne-webfont.ttf') format('truetype'),
+    url('assets/fonts/webfonts/cacchampagne/cac_champagne-webfont.svg#webfont') format('svg');
 }
 
 body {
